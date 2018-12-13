@@ -1,0 +1,31 @@
+{
+  "name": "heroku-express-postgresql-async",
+  "version": "0.0.0",
+  "description": "A demonstration app.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnorWiseman/heroku-express-postgresql-async.git"
+  },
+  "keywords": [
+    "demo",
+    "heroku",
+    "express",
+    "postgresql",
+    "async"
+  ],
+  "author": "Connor Wiseman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConnorWiseman/heroku-express-postgresql-async/issues"
+  },
+  "homepage": "https://github.com/ConnorWiseman/heroku-express-postgresql-async#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "pg": "^7.7.1"
+  }
+}

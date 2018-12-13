@@ -163,7 +163,7 @@ function postEmployee(db, body) {
       const params = [ result.rows[0].id, req.body.salary ];
 
       return new Promise((resolve, reject) => {
-        db.query(sql, (error, result) => {
+        db.query(sql, params, (error, result) => {
           if (error) {
             return reject(error);
           }

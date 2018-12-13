@@ -3,7 +3,8 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  // PostgreSQL connection configuration goes here
+  connectionString: process.env.DATABASE_URL,
+  ssl: true
 });
 
 module.exports = (req, res, next) => {

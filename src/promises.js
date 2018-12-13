@@ -136,7 +136,7 @@ function getEmployees(db) {
 
 
 function postPerson(db, body) {
-  const sql    = 'INSERT INTO person (name) VALUES $1::TEXT RETURNING *';
+  const sql    = 'INSERT INTO person (name) VALUES ($1::TEXT) RETURNING *';
   const params = [ body.name ];
 
   return new Promise((resolve, reject) => {

@@ -72,7 +72,7 @@ express()
   .post('/person', database, (req, res) => {
     // Casting placeholders (the ::TEXT bit) is optional, but may help with
     // understandability in lengthier queries:
-    const sql    = 'INSERT INTO person (name) VALUES $1::TEXT RETURNING *';
+    const sql    = 'INSERT INTO person (name) VALUES ($1::TEXT) RETURNING *';
 
     // `req.body` is populated by the body parsing middleware:
     const params = [ req.body.name ];

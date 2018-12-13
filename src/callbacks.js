@@ -113,7 +113,7 @@ function getEmployees(db, callback) {
 
 
 function postPerson(db, body, callback) {
-  const sql    = 'INSERT INTO person (name) VALUES $1::TEXT RETURNING *';
+  const sql    = 'INSERT INTO person (name) VALUES ($1::TEXT) RETURNING *';
   const params = [ body.name ];
 
   db.query(sql, params, (error, result) => {

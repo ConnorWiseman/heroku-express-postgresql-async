@@ -49,7 +49,7 @@ express()
   })
   // Second verse, same as the first:
   .get('/employee', database, (req, res) => {
-    const sql = 'SELECT * FROM employee';
+    const sql = 'SELECT person.id, person.name, employee.salary FROM person INNER JOIN employee ON person.id = employee.person_id;';
 
     req.db.query(sql, (error, result) => {
       if (error) {
